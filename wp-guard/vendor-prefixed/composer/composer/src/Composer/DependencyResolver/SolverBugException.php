@@ -1,0 +1,33 @@
+<?php
+/**
+ * @license MIT
+ *
+ * Modified by Philo Hermans on 21-March-2023 using Strauss.
+ * @see https://github.com/BrianHenryIE/strauss
+ */ declare(strict_types=1);
+
+/*
+ * This file is part of Composer.
+ *
+ * (c) Nils Adermann <naderman@naderman.de>
+ *     Jordi Boggiano <j.boggiano@seld.be>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Anystack\WPGuard\V001\Composer\DependencyResolver;
+
+/**
+ * @author Nils Adermann <naderman@naderman.de>
+ */
+class SolverBugException extends \RuntimeException
+{
+    public function __construct(string $message)
+    {
+        parent::__construct(
+            $message."\nThis exception was most likely caused by a bug in Composer.\n".
+            "Please report the command you ran, the exact error you received, and your composer.json on https://github.com/composer/composer/issues - thank you!\n"
+        );
+    }
+}

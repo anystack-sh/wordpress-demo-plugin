@@ -1,0 +1,11 @@
+{
+   "requires":"5.0",
+   "tested":"4.8",
+   "upgrade_notice":"Here's why you should upgrade...",
+   "author":"Anystack",
+   "author_homepage":"https://anystack.sh",
+   "sections":{
+	   "description":"My description here",
+      "installation":"(Recommended) Installation instructions."
+   }
+}

@@ -1,0 +1,33 @@
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * Modified by Philo Hermans on 21-March-2023 using Strauss.
+ * @see https://github.com/BrianHenryIE/strauss
+ */
+
+namespace Anystack\WPGuard\V001\Symfony\Component\VarExporter\Internal;
+
+/**
+ * @author Nicolas Grekas <p@tchwork.com>
+ *
+ * @internal
+ */
+class Reference
+{
+    public $id;
+    public $value;
+    public $count = 0;
+
+    public function __construct(int $id, $value = null)
+    {
+        $this->id = $id;
+        $this->value = $value;
+    }
+}

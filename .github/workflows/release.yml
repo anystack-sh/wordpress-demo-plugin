@@ -1,0 +1,21 @@
+name: Releases
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Bump version number
+        run: sed -i "s/REF/$GITHUB_REF_NAME/g" demo.php && zip -r demo-plugin.zip .
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "demo-plugin.zip"
