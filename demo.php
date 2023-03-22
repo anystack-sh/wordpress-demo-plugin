@@ -30,5 +30,5 @@ $guard->validCallback(function() {
 });
 
 function daily_revenue() {
-	echo '<p>Your revenue for today is $123.45</p>';
+	echo '<p>Hi there! Your revenue for today is $123.45</p>';
 }

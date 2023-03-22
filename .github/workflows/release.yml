@@ -19,3 +19,8 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "demo-plugin.zip"
+          draft: true
+      - uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          replacesArtifacts: false
